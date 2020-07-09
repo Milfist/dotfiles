@@ -1,4 +1,41 @@
 [user]
-	name = Milfist
-	email = milfist@gmail.com
-	signingkey = 234577A07377D3B3
+	name = Miguel Anguita
+	email = Miguel.Anguita@gft.com
+	signingkey = F6E9218D0B7A0CD9
+
+[includeIf "gitdir:~/Git/mik/"]
+    path = ~/Git/mik/.gitconfig
+
+[core]
+	autocrlf = input
+	excludesfile = ~/.gitignore_global
+	editor = vim
+[help]
+	autocorrect = 1
+
+[diff]
+	tool = vimdiff
+	compactionHeuristic = true
+	indentHeuristic = true
+
+[difftool]
+	prompt = false
+
+[credential]
+	helper = osxkeychain
+
+[apply]
+	# Detect whitespace errors when applying a patch
+	whitespace = fix
+
+[commit]
+	gpgsign = true
+
+[tag]
+	gpgsign = true
+
+[gpg]
+	program = /usr/local/bin/gpg
+
+
+
