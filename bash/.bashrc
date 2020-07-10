@@ -1,11 +1,18 @@
+############ alias ############
+alias ll='ls -lGa'
+alias ls='ls -GFh'
+alias ..='cd ..'
+alias k=kubectl
+
+############ NVM ############
+
 export NVM_DIR="$HOME/.nvm"
    		[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   		[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
 export OPENTRACING_URL="http://localhost:9411"
 
-# ---------------------------------------------------------------------------
-# JAVA
+############ JAVA ############
 
 export JAVA_7_HOME=$(/usr/libexec/java_home -v1.7)
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
@@ -20,9 +27,12 @@ alias java14='export JAVA_HOME=$JAVA_14_HOME'
 # default java 14
 java14
 
+#############  DOTFILES ############
 
-#  ---------------------------------------------------------------------------
-#  LIBERBANK K8s
+export DOT=$HOME/.dotfiles
+
+
+#############  LIBERBANK K8s ############
 
 export base64Token=ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklpSjkuZXlKcGMzTWlPaUpyZFdKbGNtNWxkR1Z6TDNObGNuWnBZMlZoWTJOdmRXNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5dVlXMWxjM0JoWTJVaU9pSjBaWE4wTFdwbGJtdHBibk10Y0hKdklpd2lhM1ZpWlhKdVpYUmxjeTVwYnk5elpYSjJhV05sWVdOamIzVnVkQzl6WldOeVpYUXVibUZ0WlNJNkltNXpMV0ZrYldsdUxYUnZhMlZ1TFhSMloyNTBJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5elpYSjJhV05sTFdGalkyOTFiblF1Ym1GdFpTSTZJbTV6TFdGa2JXbHVJaXdpYTNWaVpYSnVaWFJsY3k1cGJ5OXpaWEoyYVdObFlXTmpiM1Z1ZEM5elpYSjJhV05sTFdGalkyOTFiblF1ZFdsa0lqb2lZakZqTm1abVpUY3RabUpsTnkweE1XVTVMVGxpWm1ZdE16SXlOakkzTlRsa1l6VTFJaXdpYzNWaUlqb2ljM2x6ZEdWdE9uTmxjblpwWTJWaFkyTnZkVzUwT25SbGMzUXRhbVZ1YTJsdWN5MXdjbTg2Ym5NdFlXUnRhVzRpZlEua1ljVXcyR1A0NnZadVlWVndmQ0gzbmNabWcwQnhMWU4wSG82Wm1KanBLMWFoVGxtVGEwZGhWOTN2SFVxTEM0TVZkdG9JYnJCeFpEMGw0ZkJHMWFaY1JRZzhaSWtBT01wVHNFeVlfYXI1cUNGa3BGdzVXMy0zYzM2UGRPZF83Y2tOMTJsVG1sZHJiRFF2cmRhMjFsZy1jVTU3MWMzVjRWNE5kdE9malV4N1dBVTdoRVc2THNTZUwtVkJpTzZMMFp5UG5MaUxUaDBmQlZzaUp1Zzc3ZDdCNVZIQWNTTjhPYmlPeGtVb0wwN0MtS1Q5TTlHQk9JaTJ4OVFsVzIxWXBXbm5aWXBKaUF5dFhKMlZ5Tm5kN1lCUnF6N3MydThlam5fY3YtSEU2MWFfcERPNnFMaUpiUlFoaHFVTHIxU29lS1lmenNuVlZUZ2VMVWZRakFTV0NIXzcxcDdTODNLeE0waFZBanB6Y0ZTQ2VXQ09CRlVrWU12dlp4VVdwQ0RpRFV0R2E1YTNxT3ZXdEJLeHo0V0p5SFhXb012d2VQcDFYUFZRWnR2TWxFYUR3TDkyREJPX1BWVHV4T09rbXpFTGVPMVlfMldZdktySFJ3SHZjdXNURi05N1VBd3g5T3JWMW9aSmVNZXNKWVhoQnRsUDhnN29CU05hWnpXcFd4WENzSEZxWmF6RzBNT01xNnRzenFyVFdJRGx0TVA5aXMzWHFrN3U0bXR1cTdSM2w0TnlPUWdkbFF3N3NKTFRZOGNUczItUzdKWE5LQ2NBVk5aaFdadUZoOGJOV3JEZTUwdEpsdExpanZCTkZ3VEZoUFpaME1FRjRobXhPa2lhNFpkemRxUkYxMTVDSVdXMm1aeExtOUxsWm5QdUxHbEw3N0YxM29fbUFCaTF6R250Ymc=
 
@@ -39,20 +49,21 @@ export PATH=$PATH:/Users/mlau/Downloads/client/scripts/cm:/usr/local/anaconda3/b
 # K8s dev cluster activated
 source /Users/mlau/k8s-env/dev.sh dev
 
-# Kubectl autocomplete
+############ Kubectl autocomplete ############
 export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 source <(kubectl completion bash)
-alias k=kubectl
 complete -F __start_kubectl k
 
-# Terminal colors
+
+############ Terminal colors ############
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
-alias ls='ls -GFh'
 
+
+############ Google Cloud Platform ############
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/mlau/Google SDK/google-cloud-sdk/path.bash.inc' ]; then . '/Users/mlau/Google SDK/google-cloud-sdk/path.bash.inc'; fi
@@ -64,12 +75,9 @@ export GOOGLE_APPLICATION_CREDENTIALS='/Users/mlau/Google SDK/iaml-gestion-citas
 
 
 
-#bash-git-prompt
+############ bash-git-prompt ############
 if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
   GIT_PROMPT_ONLY_IN_REPO=1
   source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
 fi
-
-# ll alias
-alias ll='ls -lGa'
