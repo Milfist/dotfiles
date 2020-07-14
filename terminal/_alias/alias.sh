@@ -4,6 +4,7 @@ alias ls='exa -l'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias tt="exa --tree --level=2 --long"
+alias ~="cd ~"
 
 alias dot='cd ~/.dotfiles'
 alias g='cd ~/Git'

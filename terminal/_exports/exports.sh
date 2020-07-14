@@ -28,3 +28,9 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 
 #############  PATH  ############
 export PATH=$PATH:/usr/local/anaconda3/bin:/usr/local/opt/mysql-client/bin:$HOME/.jenv/bin
+
+
+export FZF_DEFAULT_OPTS='
+  --color=pointer:#ebdbb2,bg+:#3c3836,fg:#ebdbb2,fg+:#fbf1c7,hl:#8ec07c,info:#928374,header:#fb4934
+  --reverse
+'
