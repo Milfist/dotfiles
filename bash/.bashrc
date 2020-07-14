@@ -39,8 +39,8 @@ fi
 eval "$(jenv init -)"
 jenv global 14
 
-
-
+############ fzf ############
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 
 
@@ -56,3 +56,6 @@ source /Users/mlau/k8s-env/dev.sh dev
 
 
 #############  LIBERBANK ############
+
+
+
