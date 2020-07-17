@@ -12,3 +12,7 @@ alias mik='cd ~/Git/mik'
 
 # others
 alias k=kubectl
+
+t() {
+  tmux new -s "$1"
+}
