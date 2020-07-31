@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
+
 # asegurese de que hayamos ingresado y actualizado cualquier submodulo
 git submodule init
 git submodule update
