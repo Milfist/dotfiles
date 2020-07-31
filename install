@@ -13,4 +13,4 @@ git --version
 
 git clone --depth 1 https://github.com/Milfist/dotfiles.git "$DOT"
 
-# "$DOTFILES_PATH/bin/dot" self install
+# "$DOT/setup" self install
