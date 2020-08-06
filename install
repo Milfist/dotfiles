@@ -13,4 +13,12 @@ git --version
 
 git clone --depth 1 https://github.com/Milfist/dotfiles.git "$DOT"
 
-# "$DOT/setup" self install
+ "$DOT/setup" self install
+
+# Brew install
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Install Brewfile
+brew bundle --file=brew/Brewfile
+
+
