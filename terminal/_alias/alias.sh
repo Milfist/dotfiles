@@ -16,3 +16,9 @@ alias k=kubectl
 t() {
   tmux new -s "$1"
 }
+
+# git
+
+alias gs='git status'
+alias ga='git add .'
+
