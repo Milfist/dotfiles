@@ -23,7 +23,7 @@ fi
 
 ############ jenv - JAVA ############
 eval "$(jenv init -)"
-jenv global 14
+jenv global 17.0.5
 
 
 ############ fzf ############
@@ -37,7 +37,7 @@ if [ -f "$FILE" ]; then
 fi
 
 
-############ Google Cloud Platform: SDK is instaled ############
+############ Google Cloud Platform: SDK is installed ############
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/Google SDK/google-cloud-sdk/path.bash.inc" ]; then . "$HOME/Google SDK/google-cloud-sdk/path.bash.inc"; fi

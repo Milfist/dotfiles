@@ -27,7 +27,7 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 
 
 #############  PATH  ############
-export PATH=$PATH:/usr/local/anaconda3/bin:/usr/local/opt/mysql-client/bin:$HOME/.jenv/bin
+export PATH=$PATH:/usr/local/anaconda3/bin:/usr/local/opt/mysql-client/bin:$HOME/.jenv/bin:/Users/mlau/Git/RSI/proyectos/sonar-scanner-4.6.2.2472/bin:/Users/mlau/apache-ant-1.10.11/bin
 
 
 export FZF_DEFAULT_OPTS='

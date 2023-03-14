@@ -1,7 +1,7 @@
 [user]
-	name = Miguel Anguita
-	email = Miguel.Anguita@gft.com
-	signingkey = F6E9218D0B7A0CD9
+	name = Miguel Anguita Miron
+  email = ESX0003722@prosegur.com
+#	signingkey = F6E9218D0B7A0CD9
 
 [includeIf "gitdir:~/Git/mik/"]
     path = ~/Git/mik/.mikconfig
@@ -25,17 +25,17 @@
 	prompt = false
 
 [credential]
-	helper = osxkeychain
+	helper = store
 
 [apply]
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
 
 [commit]
-	gpgsign = true
+	gpgsign = false
 
 [tag]
-	gpgsign = true
+	gpgsign = false
 
 [gpg]
 	program = /usr/local/bin/gpg
@@ -44,3 +44,8 @@
 
 [http]
 	sslVerify = false
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
