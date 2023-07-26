@@ -1,6 +1,7 @@
 # directory
-alias ll='exa -la'
-alias ls='exa -l'
+alias ll='exa -la' # exa es una utilidad brew que mejora el comando ls. 
+alias ls='exa -l'  # Si al instalar los dotfiles no funciona hay que probar que el comando exa funciona.
+alias lg='exa -lG'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias tt="exa --tree --level=2 --long"

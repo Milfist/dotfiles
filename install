@@ -20,6 +20,6 @@ git clone --depth 1 https://github.com/Milfist/dotfiles.git "$DOT"
 # Install Brewfile
 brew bundle --file=brew/Brewfile
 
-# dotfiles Setup (need Stow) 
+# dotfiles Setup (need Stow)
 "$DOT/setup" self install
 
