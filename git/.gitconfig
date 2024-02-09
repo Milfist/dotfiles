@@ -1,6 +1,6 @@
 [user]
 	name = Miguel Anguita Miron
-  email = mlau@gft.com
+  	email = miguel.anguita@gft.com
 #	signingkey = F6E9218D0B7A0CD9
 
 [includeIf "gitdir:~/Git/mik/"]
