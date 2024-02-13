@@ -1,7 +1,8 @@
 # directory
-alias ll='exa -la' # exa es una utilidad brew que mejora el comando ls. 
-alias ls='exa -l'  # Si al instalar los dotfiles no funciona hay que probar que el comando exa funciona.
-alias lg='exa -lG'
+alias ll='exa --icons -la' # exa es una utilidad brew que mejora el comando ls. 
+alias ls='exa --icons -l'  # Si al instalar los dotfiles no funciona hay que probar que el comando exa funciona.
+alias lg='exa --icons -lG' # Ancho
+alias lt='exa -aT --color=always --group-directories-first --icons' # tree listing
 alias ..='cd ..'
 alias ...='cd ../..'
 alias tt="exa --tree --level=2 --long"
@@ -22,7 +23,8 @@ alias k=kubectl
 alias idea='/Applications/IntelliJ\ IDEA.app/Contents/MacOS/idea'
 alias i.='(idea $PWD &>/dev/null &)'
 
-
+#fzf + vim
+alias vf='vim $(fzf)'
 
 t() {
   tmux new -s "$1"
@@ -30,7 +32,7 @@ t() {
 
 # git
 
-alias gs='git status'
+alias gs='exa --long --git'
 alias ga='git add .'
 alias gp='git push'
 alias pull='git pull'
