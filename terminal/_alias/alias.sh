@@ -48,9 +48,9 @@ t() {
 # git
 
 alias ga='git add .'
-alias push='git push origin $(git branch | fzf)'
+alias gpush='git push origin $(git branch | fzf | sed -s "s/*//")'
 alias dl='git diff --name-only | fzf --preview "bat --color=always --line-range=:500 {}"'
 alias da='git diff --name-only --relative --diff-filter=d | xargs bat --diff'
 alias cr='git checkout -b $(git branch -r | fzf | sed "s/origin\\///")'
 alias ch='git checkout $(git branch | fzf)'
-alias pull='git pull origin $(git branch | fzf)'
+alias gpull='git pull origin $(git branch | fzf | sed -s "s/*//")'
