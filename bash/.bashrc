@@ -1,7 +1,7 @@
 
 source $HOME/.dotfiles/terminal/_alias/alias.sh
 source $HOME/.dotfiles/terminal/_exports/exports.sh
-
+source $HOME/.dotfiles/terminal/_functions/export_brew.sh
 
 ############ K8s, Kubectl autocomplete ############
 export KUBECONFIG=$HOME/.kube/config

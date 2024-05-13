@@ -23,3 +23,7 @@ brew bundle --file=brew/Brewfile
 # dotfiles Setup (need Stow)
 "$DOT/setup" self install
 
+
+$(brew --prefix)/opt/fzf/installs
+
+
