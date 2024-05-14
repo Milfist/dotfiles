@@ -57,7 +57,13 @@ alias gpull='git pull origin $(git branch | fzf | sed "s/*//")'
 alias gs='git status'
 
 gc() {
-  git commit -m "feat: $*"
+  array=("feat","chore","fix")
+  
+  type=Echo “${array[@]}” |  td ‘\s’ ‘\n’ | fzf
+
+
+
+  git commit -m "$type: $*"
 }
 
 
