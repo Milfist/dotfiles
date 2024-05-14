@@ -57,7 +57,7 @@ alias gpull='git pull origin $(git branch | fzf | sed "s/*//")'
 alias gs='git status'
 
 gc() {
-  git commit -m "$1: $2"
+  git commit -m "feat: $*"
 }
 
 
