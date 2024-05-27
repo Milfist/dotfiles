@@ -60,13 +60,13 @@ alias revert='git checkout $(git status --short | fzf | sed "s/M//")'
 
 
 gc() {
-  array=("feat","chore","fix")
+  local actions=("feat","chore","fix")
   
-  type=Echo “${array[@]}” |  td ‘\s’ ‘\n’ | fzf
+  local action=$(printf "%s\n" "${actions[@]}" | fzf)
 
 
 
-  git commit -m "$type: $*"
+  git commit -m "$action: $*"
 }
 
 
