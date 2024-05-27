@@ -48,7 +48,7 @@ t() {
 # git
 
 alias ga='git add .'
-alias gaf='git add $(git status --short | fzf | sed -e "s/M\{1,2\}//" -e "s/\?\?//")'
+alias gaf='git add $(git status --short | fzf --multi | sed -e "s/M\{1,2\}//" -e "s/\?\?//")'
 alias gpush='git push origin $(git branch | fzf | sed "s/*//")'
 alias dl='git diff --name-only | fzf --preview "bat --color=always --line-range=:500 {}"'
 alias da='git diff --name-only --relative --diff-filter=d | xargs bat --diff'
@@ -56,8 +56,8 @@ alias cr='git checkout -b $(git branch -r | fzf | sed "s/origin\\///")'
 alias ch='git checkout $(git branch | fzf)'
 alias gpull='git pull origin $(git branch | fzf | sed "s/*//")'
 alias gs='git status'
-alias revert='git checkout $(git status --short | fzf | sed "s/M//")' 
-
+alias revert='git checkout $(git status --short | fzf | sed -e "s/M\{1,2\}//" -e "s/\?\?//")' 
+alias gm='git merge $(git branch -r | fzf)'
 
 gc() {
   local actions=("feat" "chore" "fix")
@@ -68,3 +68,4 @@ gc() {
 
   git commit -m "$action: $*"
 }
+

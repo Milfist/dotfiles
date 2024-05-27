@@ -40,8 +40,3 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --reverse
 '
 
-#export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-# --color=fg:#ffffff,bg:#000000,hl:#5f87af
-# --color=fg+:#fff700,bg+:#a8a5a5,hl+:#5fd7ff
-# --color=info:#afaf87,prompt:#d7005f,pointer:#af5fff
-# --color=marker:#6fcc0c,spinner:#af5fff,header:#87afaf'
