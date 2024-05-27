@@ -69,4 +69,15 @@ gc() {
   git commit -m "$action: $*"
 }
 
+sw() {
+    local words=("Hola" "Mundo" "Fzf" "Bash")
+    local selected_word=$(printf "%s\n" "${words[@]}" | fzf)
+
+    echo "Palabra seleccionada: ${selected_word}"
+
+    # Utilizar la palabra seleccionada en otro comando
+    # Ejemplo de comando con la palabra seleccionada
+    echo "La palabra seleccionada es: ${selected_word}"
+}
+
 
