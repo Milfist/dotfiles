@@ -10,7 +10,7 @@ export DOT=$HOME/.dotfiles
 
 
 #############  K8s  ############
-export KUBECONFIG=$HOME/.kube/config
+export KUBECONFIG=$HOME/Git/Hipoges/kube_config_local.yaml
 
 
 ############  BREW  ############
